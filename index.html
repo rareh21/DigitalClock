@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+        <div id="clock" class="clock" onload="showTime()"></div>
         <Script type="text/javascript">
             function showTime(){
                 var date = new Date();
@@ -27,8 +27,8 @@
                 s = (s < 10) ? "0" + s : s;
                 
                 var time = h + ":" + m + ":" + s + " " + session;
-                document.getElementById("MyClockDisplay").innerText = time;
-                document.getElementById("MyClockDisplay").textContent = time;
+                document.getElementById("clock").innerText = time;
+                document.getElementById("clock").textContent = time;
                 
                 setTimeout(showTime, 1000);
                 
